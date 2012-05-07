@@ -1,0 +1,35 @@
+Kompilacja:
+-----------
+
+wymagane biblioteki:
+	Tidy
+	curl
+	boost.filesystem
+	libxml2
+
+Potem wpisać make i się modlić.
+
+Użycie:
+-------
+Po pierwszym uruchomieniu program stworzy sobie parę katalogów. Pod windowsem
+powinno to być w "C:\Document and Settings\User\Application Data" lub
+analogicznej sciezce.
+
+W katalogu "sites" zaklada się katalog dla każdej strony, którą chcemy
+obserwować i w nim tworzy dwa pliki.
+
+config.txt - zawiera jeden adres URL na linię. To są adresy stron, które będą
+obserwowane. - z nich będą wyszukiwane linki
+
+pattern.html - plik html określający, którą część tekstu wyciągnąć.
+
+Pattern
+-------
+Żeby zrobić pattern najlepiej otworzyć interesującą nas stronę, wybrać jeden z
+linków, następnia zapisać źródła otrzymanej strony i otworzyć je edytorem.
+Odszukać miejsce, z którego chcemy wybrać tekst i dopisujemy tam:
+
+<div title="ekhem-extract"/>
+
+Ten znacznik może wystąpić w pliku kilka razy.
+
